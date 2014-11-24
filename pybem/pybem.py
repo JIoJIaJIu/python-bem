@@ -68,7 +68,7 @@ class BEMRender(object):
                     jsdata.append(open(path).read())
                 except IOError:
                     pass
-        return '\n'.join(jsdata).decode('utf-8')
+        return js_escape_unicode('\n'.join(jsdata).decode('utf-8'))
 
     def get_extensions(self, pagedir, extra_files):
         '''
